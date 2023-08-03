@@ -4,10 +4,10 @@ Priority: optional
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Uploaders: Dylan Aïssi <daissi@debian.org>
 Build-Depends: debhelper-compat (= 13),
-               meson (>= 0.47),
+               meson,
                ninja-build,
-               nasm (>= 2.14) [any-amd64 any-i386]
-Standards-Version: 4.6.0
+               nasm [any-amd64 any-i386]
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://www.videolan.org/projects/dav1d.html
 Vcs-Browser: https://salsa.debian.org/multimedia-team/dav1d
@@ -30,7 +30,7 @@ Description: fast and small AV1 video stream decoder
   * full acceleration for ARMv8 chips
   * partial acceleration for ARMv7 chips
 
-Package: libdav1d5
+Package: libdav1d6
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -55,7 +55,7 @@ Package: libdav1d-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libdav1d5 (= ${binary:Version}),
+Depends: libdav1d6 (= ${binary:Version}),
          ${misc:Depends}
 Description: fast and small AV1 video stream decoder (development files)
  dav1d is an AOMedia Video 1 (AV1) cross-platform decoder and focused on speed

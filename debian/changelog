@@ -1,3 +1,13 @@
+dav1d (1.2.1-2deepin1) unstable; urgency=medium
+
+  * Fix CVE-2024-1580:
+    d/patches/debian/patches/Fix-tile_start_off-calculations-for-extremely-large-frame-sizes.diff
+    An integer overflow in dav1d AV1 decoder that can occur when decoding
+    videos with large frame size. This can lead to memory corruption within
+    the AV1 decoder.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 10 May 2024 16:58:13 +0800
+
 dav1d (1.2.1-2) unstable; urgency=medium
 
   * Upload to unstable
